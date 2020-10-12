@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-13 00:34:57" itemprop="dateModified" datetime="2020-10-13T00:34:57+08:00">2020-10-13</time>
+                <time title="Modified: 2020-10-13 01:45:58" itemprop="dateModified" datetime="2020-10-13T01:45:58+08:00">2020-10-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -212,7 +212,7 @@
 <h1 id="开干"><a href="#开干" class="headerlink" title="开干"></a>开干</h1><ol>
 <li>github新建一个私有仓库，获得该库SSH链接。</li>
 <li>本地Hexo文件夹下打开git，执行以下命令（已经安装好Hexo）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//http链接</span><br><span class="line">git remote set-url origin https://github.com/bestsort/my-blog.git</span><br><span class="line"></span><br><span class="line">//git链接</span><br><span class="line">git remote set-url origin git@github.com:wws563/hexo-source.git</span><br><span class="line">//替换为1中取得的链接</span><br></pre></td></tr></table></figure>
-注-Hexo 实现多地部署及优化访问速度这篇文章里应该用的是http链接，正常git一般都用ssh链接，所以是git@开头的地址。不确定自己用的什么模式可以用git remote -v确认一下， 如下图所示。</li>
+注-Hexo 实现多地部署及优化访问速度这篇文章里应该用的是http链接，正常git一般都用ssh链接，所以是git@开头的地址。不确定自己用的什么模式可以用git remote -v确认一下， 如下图所示。<br><img src="https://i.loli.net/2020/10/13/7MKi1DPntg8Hjrm.png" alt="MINGW64__d_git_hexo 2020_10_12 23_39_08_副本.png"></li>
 <li>执行上传指令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master  </span><br><span class="line">//首次使用-u代表把本地origin分支上传至github的master的作为push的默认设置。之后就可以直接push。</span><br></pre></td></tr></table></figure>
 
 </li>
