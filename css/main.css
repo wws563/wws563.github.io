@@ -18,34 +18,6 @@
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg-color: #282828;
-    --content-bg-color: #333;
-    --card-bg-color: #555;
-    --text-color: #ccc;
-    --blockquote-color: #bbb;
-    --link-color: #ccc;
-    --link-hover-color: #eee;
-    --brand-color: #ddd;
-    --brand-hover-color: #ddd;
-    --table-row-odd-bg-color: #282828;
-    --table-row-hover-bg-color: #363636;
-    --menu-item-bg-color: #555;
-    --btn-default-bg: #222;
-    --btn-default-color: #ccc;
-    --btn-default-border-color: #555;
-    --btn-default-hover-bg: #666;
-    --btn-default-hover-color: #ccc;
-    --btn-default-hover-border-color: #666;
-  }
-  img {
-    opacity: 0.75;
-  }
-  img:hover {
-    opacity: 0.9;
-  }
-}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -299,7 +271,7 @@ kbd {
   border: 1px solid #ccc;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
-  color: #555;
+  color: #c7254e;
   font-family: inherit;
   padding: 0.1em 0.3em;
   white-space: nowrap;
@@ -422,9 +394,9 @@ code {
   font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
-  background: #eee;
+  background: #f9f2f4;
   border-radius: 3px;
-  color: #555;
+  color: #c7254e;
   padding: 2px 4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1197,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff8f90;
+  background: #ff0e3c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
