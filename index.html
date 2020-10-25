@@ -148,6 +148,160 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/20/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="王禕淼">
+      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="1000ms === 1s">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/20/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">算法练习之冒泡算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-20 19:39:11" itemprop="dateCreated datePublished" datetime="2020-10-20T19:39:11+08:00">2020-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-23 18:27:07" itemprop="dateModified" datetime="2020-10-23T18:27:07+08:00">2020-10-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">计算机基础</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>var org =[123,234,345,123,423,1233,452,3,45,234];<br>// let i = 0<br>// while (i &lt; 10000) {<br>//   org.push(Math.random()*10000);<br>//   i++;<br>// }</p>
+<p>var quickSort = function (array){<br>  let p = array[0];<br>  let la = [];<br>  let ra = [];</p>
+<p>  if (array.length == 0){<br>    return [];<br>  } else if (array.length == 1){<br>    return [p];<br>  } else if (array.length &gt; 1) {<br>    for (let i = 1; i &lt; array.length; i++) {<br>      if (array[i] &lt;= p) {<br>        la.push(array[i]);<br>      }<br>      else {<br>        ra.push(array[i]);<br>      }<br>    }<br>    return quickSort(la).concat(p).concat(quickSort(ra));<br>  }else{<br>    console.log(‘未知错误’)<br>  }<br>}</p>
+<p>let st = new Date();<br>console.log(quickSort(org));<br>let et = new Date();<br>console.log(et-st);</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/20/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="王禕淼">
+      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="1000ms === 1s">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/20/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">算法练习之冒泡算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-20 19:39:11" itemprop="dateCreated datePublished" datetime="2020-10-20T19:39:11+08:00">2020-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-23 18:27:07" itemprop="dateModified" datetime="2020-10-23T18:27:07+08:00">2020-10-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">计算机基础</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>var org =[123,234,345,123,423,1233,452,3,45,234];<br>// let i = 0<br>// while (i &lt; 10000) {<br>//   org.push(Math.random()*10000);<br>//   i++;<br>// }</p>
+<p>var quickSort = function (array){<br>  let p = array[0];<br>  let la = [];<br>  let ra = [];</p>
+<p>  if (array.length == 0){<br>    return [];<br>  } else if (array.length == 1){<br>    return [p];<br>  } else if (array.length &gt; 1) {<br>    for (let i = 1; i &lt; array.length; i++) {<br>      if (array[i] &lt;= p) {<br>        la.push(array[i]);<br>      }<br>      else {<br>        ra.push(array[i]);<br>      }<br>    }<br>    return quickSort(la).concat(p).concat(quickSort(ra));<br>  }else{<br>    console.log(‘未知错误’)<br>  }<br>}</p>
+<p>let st = new Date();<br>console.log(quickSort(org));<br>let et = new Date();<br>console.log(et-st);</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/17/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E2%80%94%E2%80%94let%E5%92%8Cconst%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -582,16 +736,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
