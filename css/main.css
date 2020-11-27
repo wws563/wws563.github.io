@@ -1154,6 +1154,7 @@ pre .javascript .function {
   font-size: 0.8125em;
   margin-top: 0;
   text-align: left;
+  color: #456;
 }
 .links-of-author {
   margin-top: 15px;
@@ -1169,7 +1170,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ad5c82;
+  background: #ff7706;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
