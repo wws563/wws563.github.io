@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/fc-ico.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fc-ico.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/fc-ico.ico">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -24,7 +24,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo多地管理">
 <meta property="og:url" content="https://wws563.github.io/2020/10/12/hexo%E5%A4%9A%E5%9C%B0%E7%AE%A1%E7%90%86/index.html">
-<meta property="og:site_name" content="1000ms &#x3D;&#x3D;&#x3D; 1s">
+<meta property="og:site_name" content="Tyler Durden">
 <meta property="og:description" content="前言Hexo这个博客的形式没有线上编辑管理的功能。而且部署后，仓库里只有发布后的代码，其他地方无法管理，既不方便也不安全。这样明显很不cool。所以需要学习一下如何多地管理。搜索了一下，其实就是再上传一份源码，部署归部署，源码归源码。 这里参考这篇文章——Hexo 实现多地部署及优化访问速度 同时再写一下自己的理解。 学习 先是去网上查了一下,结果发现大多数采用的方案都是在一个 git 仓库里开两">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/10/13/7MKi1DPntg8Hjrm.png">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>Hexo多地管理 | 1000ms === 1s</title>
+  <title>Hexo多地管理 | Tyler Durden</title>
   
 
 
@@ -82,6 +82,9 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
+  <div class="bg-container">
+    <img width="1920" height="1080" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606761189310&di=a5074ebb7b3fd004ca6fdde7156572a4&imgtype=0&src=http%3A%2F%2Fimg01.3dmgame.com%2Fuploads%2Fallimg%2F131128%2F248_131128194917_1.jpg" />
+  </div>
   <div class="container use-motion">
     <div class="headband"></div>
 
@@ -99,10 +102,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">1000ms === 1s</h1>
+      <h1 class="site-title">Tyler Durden</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">逃げじゃ駄目だ</p>
+      <p class="site-subtitle" itemprop="description">Welcom To "FightClub"!</p>
   </div>
 
   <div class="site-nav-right">
@@ -173,7 +176,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="1000ms === 1s">
+      <meta itemprop="name" content="Tyler Durden">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -357,7 +360,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -493,7 +496,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       appId      : '3hS8tON2ItG0OdEtBsV8JuFB-MdYXbMMI',
       appKey     : 'Ih7hoQtTfaVROYSr2sVgumli',
       placeholder: "I want your NOISE!~",
-      avatar     : 'mm',
+      avatar     : 'monsterid',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : false,
@@ -506,5 +509,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
+
+  <script type="text/javascript" src="/js/custom.js"></script>
 </body>
 </html>
