@@ -18,6 +18,4 @@ function changeBg(e = e||window.event||event){
     var perY = e.clientY / document.body.clientHeight * 15 +'px'
     document.getElementsByClassName('bg-container')[0].style.transform = 'translate(' + perX +', ' + perY + ')';
     // document.getElementsByTagName('body')[0].style.transform = 'translate(' + perX +', ' + perY + ')';
-    console.log('translate(' + perX +', ' + perY + ')'); 
-
 }
