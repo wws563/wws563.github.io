@@ -17,17 +17,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wws563.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"wws563.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club. #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club. #3 - If someone says stop, goes limp, taps out, the fig">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tyler Durden">
+<meta property="og:title" content="FightClub">
 <meta property="og:url" content="https://wws563.github.io/index.html">
-<meta property="og:site_name" content="Tyler Durden">
+<meta property="og:site_name" content="FightClub">
 <meta property="og:description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club. #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club. #3 - If someone says stop, goes limp, taps out, the fig">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="王禕淼">
+<meta property="article:tag" content="前端,javascript,技术,github,hexo">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://wws563.github.io/">
@@ -43,7 +44,7 @@
   };
 </script>
 
-  <title>Tyler Durden</title>
+  <title>FightClub</title>
   
 
 
@@ -78,7 +79,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="bg-container">
-    <img width="1920" height="1080" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606761189310&di=a5074ebb7b3fd004ca6fdde7156572a4&imgtype=0&src=http%3A%2F%2Fimg01.3dmgame.com%2Fuploads%2Fallimg%2F131128%2F248_131128194917_1.jpg" />
+    <img width="1920" height="1080" src="/images/fc-bg.jpg" />
   </div>
   <div class="container use-motion">
     <div class="headband"></div>
@@ -97,7 +98,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Tyler Durden</h1>
+      <h1 class="site-title">FightClub</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">Welcom To "FightClub"!</p>
@@ -161,6 +162,312 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2021/01/21/hot-potato/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="王禕淼">
+      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FightClub">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/21/hot-potato/" class="post-title-link" itemprop="url">用Javascript实现击鼓传花游戏</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-21 22:43:14 / 修改时间：22:45:30" itemprop="dateCreated datePublished" datetime="2021-01-21T22:43:14+08:00">2021-01-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">js基础</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/01/21/hot-potato/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/21/hot-potato/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>题目为击鼓传花游戏，在这个游戏中，孩子们围成一个圆圈，把花尽快地传递给旁边的人。某一时刻传花停止，这个时候花在谁手里，谁就退出圆圈结束游戏。重复这个过程，直到只剩一个孩子（胜者）。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 需要思考passGame如何写</span><br><span class="line">var names &#x3D; [&quot;John&quot;, &quot;Jack&quot;, &quot;Camila&quot;, &quot;Ingrid&quot;, &quot;Carl&quot;];</span><br><span class="line">var endName &#x3D; passGame(names, 8); &#x2F;&#x2F; 数到 8 的人淘汰</span><br><span class="line">console.log(&quot;最终留下:&quot; + endName); &#x2F;&#x2F; &#39;john&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>先尝试自己思考，用我愚蠢的脑瓜想出来两个解决方案</p>
+<h5 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h5><p>用变量now代表当前的列表索引位置，max代表数组长度，interval代表数到几淘汰，counter代表计数器每次到8清零。循环使用splice删除元素。最后得到胜利者。</p>
+<h5 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h5><p>用变量now代表索引位置，使用模计算，8%5余3，删除第三个，然后记录新的索引位置，8%4余0，删除最后一个…最后得到胜利者。</p>
+<p>但以上两种方案，对于now的控制很麻烦，虽然都可以完成题目，但是变量变化以后非常容易出错。并不是好的解决方案。</p>
+<h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>寻找答案后，这题考的是队列的使用。<br><a target="_blank" rel="noopener" href="https://www.freesion.com/article/7708838573/">队列：优先队列+循环队列（击鼓传花算法）</a><br>感谢大佬的分享</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>学习了队列的概念</p>
+<blockquote>
+<p>队列是遵循FIFO（First In First Out，先进先出，也称为先来先服务）原则的一组有序的项。队列在尾部添加新元素，并从顶部移除元素。最新添加的元素必须排在队列的末尾。</p>
+</blockquote>
+<p>该问题的解决思路也就很简单了，计数的同时，把队首的元素移动到队尾，计数器到了指定的数，就删除队首，循环这个操作，直到队列长度为1即可。这样就不会出现上面now定位不准确的问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义队列类</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Queue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.list = [];</span><br><span class="line"><span class="comment">// add-在队尾添加</span></span><br><span class="line">  <span class="built_in">this</span>.add = <span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.list.push(item);</span><br><span class="line">  &#125;;</span><br><span class="line"><span class="comment">// del-从队首删除，并返回删除的值</span></span><br><span class="line">  <span class="built_in">this</span>.del = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.list.shift();</span><br><span class="line">  &#125;;</span><br><span class="line"><span class="comment">// size-返回队列长度</span></span><br><span class="line">  <span class="built_in">this</span>.size = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.list.length;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 游戏逻辑</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">passGame</span>(<span class="params">nameList, interval</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//  声明实例和幸存者</span></span><br><span class="line">	<span class="keyword">let</span> q = <span class="keyword">new</span> Queue() , eliminated = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="comment">// 给实例中的队列赋值</span></span><br><span class="line">        q.list = nameList;</span><br><span class="line">        <span class="comment">// 当队列长度大于1时执行</span></span><br><span class="line">	<span class="keyword">while</span> (q.size() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="comment">// 开始计数，每次把队首元素移动到队尾</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; interval; j++) &#123;</span><br><span class="line">			q.add(q.del());</span><br><span class="line">		&#125;</span><br><span class="line">                <span class="comment">// 到达指定数量，删除当前元素。</span></span><br><span class="line">                eliminated = q.del() </span><br><span class="line">		<span class="built_in">console</span>.log(eliminated + <span class="string">&quot;被淘汰&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">        <span class="comment">// 最后返回幸存者</span></span><br><span class="line">	<span class="keyword">return</span> q.list[<span class="number">0</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> names = [<span class="string">&quot;Yimiao&quot;</span>, <span class="string">&quot;Jack&quot;</span>, <span class="string">&quot;Camila&quot;</span>, <span class="string">&quot;Ingrid&quot;</span>, <span class="string">&quot;Carl&quot;</span>];</span><br><span class="line">  <span class="keyword">var</span> endName = passGame(names, <span class="number">8</span>); <span class="comment">// 数到 8 的人淘汰</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;最终留下:&quot;</span> + endName); <span class="comment">// &#x27;Yimiao&#x27;</span></span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">&quot;John&quot;</span>, <span class="string">&quot;Jack&quot;</span>, <span class="string">&quot;Camila&quot;</span>, <span class="string">&quot;Ingrid&quot;</span>, <span class="string">&quot;Carl&quot;</span>];</span><br><span class="line"><span class="keyword">var</span> endName = passGame(names, <span class="number">8</span>); <span class="comment">// 数到 8 的人淘汰</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;最终留下:&quot;</span> + endName); <span class="comment">// &#x27;john&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Camila被淘汰</span></span><br><span class="line"><span class="comment">// Jack被淘汰</span></span><br><span class="line"><span class="comment">// Carl被淘汰</span></span><br><span class="line"><span class="comment">// Ingrid被淘汰</span></span><br><span class="line"><span class="comment">// 最终留下:Yimiao</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2021/01/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AA%E6%80%A7%E5%8C%96%E5%9F%9F%E5%90%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="王禕淼">
+      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FightClub">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AA%E6%80%A7%E5%8C%96%E5%9F%9F%E5%90%8D/" class="post-title-link" itemprop="url">github page+hexo自定义个性化域名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-05 21:42:32" itemprop="dateCreated datePublished" datetime="2021-01-05T21:42:32+08:00">2021-01-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-06 23:48:52" itemprop="dateModified" datetime="2021-01-06T23:48:52+08:00">2021-01-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/01/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AA%E6%80%A7%E5%8C%96%E5%9F%9F%E5%90%8D/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%B8%AA%E6%80%A7%E5%8C%96%E5%9F%9F%E5%90%8D/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="http://fightclub.myds.me:10000/images/2021/01/05/20278264-f9c585bb4123d290.jpg"></p>
+<blockquote>
+<p>会者不难，难者不会</p>
+</blockquote>
+<p>我的博客，欢迎去逛逛<a target="_blank" rel="noopener" href="http://yimiao.space/">yimiao.space</a></p>
+<p>在准备好创建自己的博客以后，从github注册，到各种认证，到git管理代码库，到博客选型选到Hexo，从0开始建立了一个博客，到多地部署，自定义主题功能。算是有了个样子，但是却一直卡在自定义域名，找了半天没找到怎么配置。虽然<a target="_blank" rel="noopener" href="http://yimiao.space/">wws563.github.io</a>这样的域名看着还行了，但总是缺点意思。</p>
+<p>想着自定义域名，但是却死活找不到教程，国内的教程大都提示要备案，国外的网站买好了域名不知道咋配。买好了域名却没用，隔了一段时间，今天忽然搜到了解决方案，原来简单到和把大象放进冰箱差不多。</p>
+<p>感谢这个<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/31377141/answer/87541858">知乎答案</a>  <del>我tm怎么早没想到去知乎搜一下</del></p>
+<p>首先，因为github page是在国外所以域名不需要备案，我是腾讯云买的域名，同理阿里或者其他服务商的也不需要。这就省了很多事了。<del>腾讯云备案还要买服务器，还好我没买</del>。<br>然后是步骤：</p>
+<ol>
+<li><p>用任何方式在博客生成后，在用于部署的publish根目录下添加一个无后缀的<code>CNAME</code>文件（<strong>文件名大写</strong>），里面写一行，你的自定义域名，比如我的是<code>yimiao.space</code>，不需要<code>http</code>也不需要<code>www</code>。这样，github page就可以识别你的自定义域名了。<br> 我用的是Hexo，方法是在源文件的<code>source</code>文件夹里添加<code>CNAME</code>文件，生成后，就会自动出现在publish里。<br><img src="http://fightclub.myds.me:10000/images/2021/01/05/_20210105213404.png" alt="publish文件夹"></p>
+</li>
+<li><p>购买域名，进入你买的域名管理界面，在里面添加两条记录。一个www，一个@。记录类型改为CNAME，然后记录值改为自己的githubpage地址。<br><img src="http://fightclub.myds.me:10000/images/2021/01/05/20278264-56a85f43365bff82.png" alt="域名解析设置"></p>
+</li>
+<li><p>修改完以后，等待几分钟dns解析，期间可以尝试用cmd，ping一下博客地址和自定义域名地址，看是否指向同一个ip，如果是同一个应该就没问题。至此，大功告成！可以通过自定义域名访问到github page了~</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/12/30/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AALazyMan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="王禕淼">
+      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FightClub">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/30/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AALazyMan/" class="post-title-link" itemprop="url">实现一个LazyMan</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 09:36:20" itemprop="dateCreated datePublished" datetime="2020-12-30T09:36:20+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-03 13:31:04" itemprop="dateModified" datetime="2021-01-03T13:31:04+08:00">2021-01-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">js基础</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/12/30/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AALazyMan/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/30/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AALazyMan/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>看到如下的一道题目，有点意思。一道题目包含了很多重要的 JS 知识点：<strong>this 指向，闭包，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139210791">事件轮询</a>，链式调用，队列等。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">实现一个LazyMan，可以按照以下方式调用:</span><br><span class="line">LazyMan(“Hank”)输出:</span><br><span class="line">Hi! This is Hank!</span><br><span class="line"></span><br><span class="line">LazyMan(“Hank”).sleep(<span class="number">10</span>).eat(“dinner”)输出</span><br><span class="line">Hi! This is Hank!</span><br><span class="line"><span class="comment">//等待10秒..</span></span><br><span class="line">Wake up after <span class="number">10</span></span><br><span class="line">Eat dinner~</span><br><span class="line"></span><br><span class="line">LazyMan(“Hank”).eat(“dinner”).eat(“supper”)输出</span><br><span class="line">Hi This is Hank!</span><br><span class="line">Eat dinner~</span><br><span class="line">Eat supper~</span><br><span class="line"></span><br><span class="line">LazyMan(“Hank”).sleepFirst(<span class="number">5</span>).eat(“supper”)输出</span><br><span class="line"><span class="comment">//等待5秒</span></span><br><span class="line">Wake up after <span class="number">5</span></span><br><span class="line">Hi This is Hank!</span><br><span class="line">Eat supper</span><br><span class="line">以此类推。</span><br></pre></td></tr></table></figure>
+
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
+<li>为了链式调用，每个方法都需要返回 this。</li>
+<li>任务顺序需要使用队列来确认执行顺序</li>
+<li>直接执行 LazyMan 就有输出，说明在构造时(constructor)就执行了输出，但 sleepFirst 可能先于这个输出，所以需要使用 settimeout，利用 Js 的轮询机制，在主任务执行完毕后，调用 next 方法开始执行任务队列。</li>
+</ol>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>有了思路，就可以着手写代码，详见注释。</p>
+<h5 id="1-ES5-prototype-原型链"><a href="#1-ES5-prototype-原型链" class="headerlink" title="1. ES5 prototype 原型链"></a>1. ES5 prototype 原型链</h5><p>关键点在代码中注释。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义_LazyMan构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_LazyMan</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> that = <span class="built_in">this</span>; <span class="comment">// 定义that保存this，在返回的方法，或settimeout上下文环境变化的情况下，保证this指向正确</span></span><br><span class="line">  <span class="built_in">this</span>.tasks = []; <span class="comment">// 创建一个执行队列</span></span><br><span class="line">  <span class="built_in">this</span>.tasks.push(</span><br><span class="line">    (<span class="function">(<span class="params">n</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 将方法push进执行队列</span></span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Hi,this is &quot;</span> + n + <span class="string">&quot;!&quot;</span>);</span><br><span class="line">        that.next(); <span class="comment">// 队列中的每个方法执行完毕后，执行next方法执行队列中下一个方法</span></span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(name)</span><br><span class="line">  ); <span class="comment">// 立即执行函数，可以返回一个带参数的function。</span></span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    that.next();</span><br><span class="line">  &#125;, <span class="number">0</span>); <span class="comment">// settimeout可以让所有的链式方法执行完毕后，再开始执行队列。</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用prototype绑定方法，实现LazyMan.func()形式的调用</span></span><br><span class="line">_LazyMan.prototype.next = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> fn = <span class="built_in">this</span>.tasks.shift(); <span class="comment">// 使用Array的shift方法，从队列中取出第一个值，队列也会相应缩短</span></span><br><span class="line">  fn &amp;&amp; fn(); <span class="comment">// 如果取得到方法，则执行。</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">_LazyMan.prototype.eat = <span class="function"><span class="keyword">function</span> (<span class="params">food</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> that = <span class="built_in">this</span>;</span><br><span class="line">  <span class="keyword">var</span> fn = (<span class="function">(<span class="params">f</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;I eated &quot;</span> + f + <span class="string">&quot;!&quot;</span>);</span><br><span class="line">      that.next();</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;)(food);</span><br><span class="line">  <span class="built_in">this</span>.tasks.push(fn);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">_LazyMan.prototype.sleep = <span class="function"><span class="keyword">function</span> (<span class="params">delay</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> that = <span class="built_in">this</span>;</span><br><span class="line">  <span class="keyword">var</span> fn = (<span class="function">(<span class="params">d</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;I sleeped &quot;</span> + d / <span class="number">1000</span> + <span class="string">&quot;s&quot;</span>);</span><br><span class="line">        that.next();</span><br><span class="line">      &#125;, d);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;)(delay);</span><br><span class="line">  <span class="built_in">this</span>.tasks.push(fn);</span><br><span class="line">  <span class="keyword">return</span> that;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">_LazyMan.prototype.sleepFirst = <span class="function"><span class="keyword">function</span> (<span class="params">delay</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> that = <span class="built_in">this</span>;</span><br><span class="line">  <span class="keyword">var</span> fn = (<span class="function">(<span class="params">d</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;At first! sleep &quot;</span> + d / <span class="number">1000</span> + <span class="string">&quot;s&quot;</span>);</span><br><span class="line">        that.next();</span><br><span class="line">      &#125;, d);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;)(delay);</span><br><span class="line">  <span class="built_in">this</span>.tasks.unshift(fn); <span class="comment">//!! sleepFirst比较特殊，使用unshift把方法添加到队列最前，从而实现首先执行。</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 工厂模式返回LazyMan</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LazyMan</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> _LazyMan(name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">LazyMan(<span class="string">&quot;Eason&quot;</span>).sleep(<span class="number">1000</span>).eat(<span class="string">&quot;fish&quot;</span>).eat(<span class="string">&quot;egg&quot;</span>).sleep(<span class="number">500</span>);</span><br><span class="line"><span class="comment">// At first! sleep 1s</span></span><br><span class="line"><span class="comment">// Hi,this is Eason!</span></span><br><span class="line"><span class="comment">// I eated fish!</span></span><br><span class="line"><span class="comment">// I eated egg!</span></span><br><span class="line"><span class="comment">// I sleeped 0.5s</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-ES6-Class-改写"><a href="#2-ES6-Class-改写" class="headerlink" title="2. ES6 Class 改写"></a>2. ES6 Class 改写</h5><p>用 ES6 的 Class 特性修改明显变优雅很多。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_LazyMan</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">let</span> that = <span class="built_in">this</span>;</span><br><span class="line">    (<span class="built_in">this</span>.tasks = []),</span><br><span class="line">      (<span class="built_in">this</span>.fn = (<span class="function">(<span class="params">n</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&quot;this is &quot;</span> + n + <span class="string">&quot;!(By Class)&quot;</span>);</span><br><span class="line">          that.next();</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;)(name));</span><br><span class="line">    <span class="built_in">this</span>.tasks.push(<span class="built_in">this</span>.fn);</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      that.next();</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  next() &#123;</span><br><span class="line">    <span class="keyword">var</span> fn = <span class="built_in">this</span>.tasks.shift();</span><br><span class="line">    fn &amp;&amp; fn();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  eat(food) &#123;</span><br><span class="line">    <span class="keyword">let</span> fn = (<span class="function">(<span class="params">f</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;eat &quot;</span> + f);</span><br><span class="line">        <span class="built_in">this</span>.next();</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(food);</span><br><span class="line">    <span class="built_in">this</span>.tasks.push(fn);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  sleep(delay, immedia = <span class="literal">false</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> that = <span class="built_in">this</span>;</span><br><span class="line">    <span class="keyword">let</span> fn = (<span class="function">(<span class="params">d, i</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;i ? <span class="string">&quot;sleepFisrt &quot;</span> : <span class="string">&quot;sleep &quot;</span>&#125;</span>`</span> + d / <span class="number">1000</span> + <span class="string">&quot;s&quot;</span>);</span><br><span class="line">          that.next();</span><br><span class="line">        &#125;, d);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(delay, immedia);</span><br><span class="line">    immedia ? <span class="built_in">this</span>.tasks.unshift(fn) : <span class="built_in">this</span>.tasks.push(fn);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  sleepFirst(delay) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.sleep(delay, <span class="literal">true</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> LazyMan = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> _LazyMan(name);</span><br><span class="line">&#125;;</span><br><span class="line">LazyMan(<span class="string">&quot;&quot;</span>).eat(<span class="string">&quot;fish&quot;</span>).sleepFirst(<span class="number">1000</span>).sleep(<span class="number">2000</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-Promise-实现"><a href="#3-Promise-实现" class="headerlink" title="3. Promise 实现"></a>3. Promise 实现</h5><p>队列执行任务，Promise 也有类似的属性，尝试用 Promise 实现。<br>参考：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903496433532935#heading-3">如何实现一个 LazyMan</a><br>这个文章里的例子有小错误，修改后如下。用 Promise 实现 LazyMan 没有发挥 Promise 对于异步链式操作的方便性，反而让逻辑看起来很复杂，能实现，但并不好。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_LazyMan</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.orderPromise = <span class="built_in">this</span>.newPromise(); <span class="comment">// 定义顺序promise对象</span></span><br><span class="line">  <span class="built_in">this</span>.insertPromise = <span class="built_in">this</span>.newPromise(); <span class="comment">// 定义插入promise对象</span></span><br><span class="line">  <span class="built_in">this</span>.order(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    resolve();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">_LazyMan.prototype = &#123;</span><br><span class="line">  <span class="comment">/*实例化promise对象工厂*/</span></span><br><span class="line">  newPromise: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">      resolve();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  order: <span class="function"><span class="keyword">function</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    <span class="built_in">this</span>.orderPromise = <span class="built_in">this</span>.orderPromise.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//如果有insertPromise,阻塞orderPromise.</span></span><br><span class="line">        <span class="keyword">if</span> (self.fir) &#123;</span><br><span class="line">          self.insertPromise.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            fn(resolve);</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          fn(resolve);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  insert: <span class="function"><span class="keyword">function</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    <span class="built_in">this</span>.fir = <span class="literal">true</span>;</span><br><span class="line">    <span class="built_in">this</span>.insertPromise = <span class="built_in">this</span>.insertPromise.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">        fn(resolve);</span><br><span class="line">        self.fir = <span class="literal">false</span>;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  firstTime: <span class="function"><span class="keyword">function</span> (<span class="params">time</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> fn = <span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;wait &quot;</span> + time + <span class="string">&quot; s,other logic&quot;</span>);</span><br><span class="line">        resolve();</span><br><span class="line">      &#125;, time * <span class="number">1000</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">this</span>.insert(fn);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  eat: <span class="function"><span class="keyword">function</span> (<span class="params">something</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> fn = <span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(something + <span class="string">&quot; ~~&quot;</span>);</span><br><span class="line">      resolve();</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">this</span>.order(fn);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  sleep: <span class="function"><span class="keyword">function</span> (<span class="params">time</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> fn = <span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;sleep &quot;</span> + time + <span class="string">&quot; s&quot;</span>);</span><br><span class="line">        resolve();</span><br><span class="line">      &#125;, time * <span class="number">1000</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">this</span>.order(fn);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//接口封装。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LazyMan</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> _LazyMan(name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用测试</span></span><br><span class="line">LazyMan(<span class="string">&quot;RoryWu&quot;</span>).sleep(<span class="number">2</span>).eat(<span class="string">&quot;dinner&quot;</span>).eat(<span class="string">&quot;breakfast&quot;</span>);</span><br><span class="line"><span class="comment">// 弹出：</span></span><br><span class="line"><span class="comment">// wait 1 s, other logic</span></span><br><span class="line"><span class="comment">// wait 3 s, other logic</span></span><br><span class="line"><span class="comment">// RoryWu</span></span><br><span class="line"><span class="comment">// sleep 2 s</span></span><br><span class="line"><span class="comment">// dinner~~</span></span><br><span class="line"><span class="comment">// breakfast~~</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/12/01/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E6%8E%92%E5%BA%8F%EF%BC%8C%E5%86%92%E6%B3%A1%EF%BC%8C%E6%8F%92%E5%85%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -170,7 +477,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -302,7 +609,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -442,7 +749,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -565,7 +872,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -733,7 +1040,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -831,12 +1138,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/20/%E7%AE%97%E6%B3%95%E5%A1%AB%E5%9D%91/" class="post-title-link" itemprop="url">算法填坑由浅入深的十个经典算法的JavaScript实现（1/10）</a>
+            <a href="/2020/10/20/%E7%AE%97%E6%B3%95%E5%A1%AB%E5%9D%91/" class="post-title-link" itemprop="url">算法填坑由浅入深的十个经典算法的JavaScript实现（4/10）</a>
         </h2>
 
         <div class="post-meta">
@@ -853,7 +1160,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-02 21:50:46" itemprop="dateModified" datetime="2020-12-02T21:50:46+08:00">2020-12-02</time>
+                <time title="修改时间：2021-01-03 13:31:04" itemprop="dateModified" datetime="2021-01-03T13:31:04+08:00">2021-01-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -892,9 +1199,9 @@
       
           <p>虽然只是个狗前端，但还是要打牢基础。这边基于Javascript的ES6标准，手撸经典算法。是个不小的坑。慢慢填吧。</p>
 <h1 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h1><ul>
-<li>[冒泡排序]（/2020/12/01/算法练习之排序，冒泡，插入）</li>
-<li>[选择排序]（/2020/12/01/算法练习之排序，冒泡，插入）</li>
-<li>[插入排序]（/2020/12/01/算法练习之排序，冒泡，插入）</li>
+<li><a href="/2020/12/01/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E6%8E%92%E5%BA%8F%EF%BC%8C%E5%86%92%E6%B3%A1%EF%BC%8C%E6%8F%92%E5%85%A5">冒泡排序</a></li>
+<li><a href="/2020/12/01/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E6%8E%92%E5%BA%8F%EF%BC%8C%E5%86%92%E6%B3%A1%EF%BC%8C%E6%8F%92%E5%85%A5">选择排序</a></li>
+<li><a href="/2020/12/01/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E6%8E%92%E5%BA%8F%EF%BC%8C%E5%86%92%E6%B3%A1%EF%BC%8C%E6%8F%92%E5%85%A5">插入排序</a></li>
 </ul>
 <h1 id="中级算法"><a href="#中级算法" class="headerlink" title="中级算法"></a>中级算法</h1><ul>
 <li><a href="/2020/10/25/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a></li>
@@ -935,7 +1242,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
+      <meta itemprop="name" content="FightClub">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1074,282 +1381,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/12/hexo%E5%A4%9A%E5%9C%B0%E7%AE%A1%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="王禕淼">
-      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/12/hexo%E5%A4%9A%E5%9C%B0%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">Hexo多地管理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-10-12 19:38:38" itemprop="dateCreated datePublished" datetime="2020-10-12T19:38:38+08:00">2020-10-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-17 00:25:25" itemprop="dateModified" datetime="2020-10-17T00:25:25+08:00">2020-10-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/10/12/hexo%E5%A4%9A%E5%9C%B0%E7%AE%A1%E7%90%86/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/12/hexo%E5%A4%9A%E5%9C%B0%E7%AE%A1%E7%90%86/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo这个博客的形式没有线上编辑管理的功能。而且部署后，仓库里只有发布后的代码，其他地方无法管理，既不方便也不安全。这样明显很不cool。<br>所以需要学习一下如何多地管理。搜索了一下，其实就是再上传一份源码，部署归部署，源码归源码。</p>
-<p>这里参考这篇文章——<a target="_blank" rel="noopener" href="https://bestsort.cn/2019/07/19/719/">Hexo 实现多地部署及优化访问速度</a></p>
-<p>同时再写一下自己的理解。</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><blockquote>
-<p>先是去网上查了一下,结果发现大多数采用的方案都是在一个 git 仓库里开两个分支. 一个放静态网页, 一个放源码. 但是这样其实是很不安全的! 在 Hexo 中我们为了方便会加一些插件,而某些插件会用到第三方平台.比如笔者博客中的评论功能( Power by Valine ) 就用到了 LeanCloud 的服务. 将评论内容, 访问量等信息存储在容器里,而这个容器的 Token 是万万不能给别人的. 而网上的通用方案因为仓库公开, 所以任何人都能看到你在里面设置的 Token, 这样是不行的</p>
-</blockquote>
-<p>查询到的信息确实很多是同一个库添加一个分支，现在确定方案用新建库的方式来上传源码。</p>
-<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>准备工作是从<code>npm</code>、<code>git</code>的安装，github注册、链接，再到hexo的安装和部署。<br>参考这篇文章吧——<a target="_blank" rel="noopener" href="https://www.cnblogs.com/visugar/p/6821777.html">hexo从零开始到搭建完整</a><br>过程中重要的步骤是设置Hexo的config.yml里面的depoly部署设置如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/wws563/wws563.github.io.git //这里写部署用的分支</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h1 id="开干"><a href="#开干" class="headerlink" title="开干"></a>开干</h1><ol>
-<li>github新建一个私有仓库，获得该库<code>SSH</code>链接。</li>
-<li>本地Hexo文件夹下打开git，执行以下命令（已经安装好Hexo）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//http链接</span><br><span class="line">git remote set-url origin https://github.com/bestsort/my-blog.git</span><br><span class="line"></span><br><span class="line">//git链接</span><br><span class="line">git remote set-url origin git@github.com:wws563/hexo-source.git</span><br><span class="line">//替换为1中取得的链接</span><br></pre></td></tr></table></figure>
-注-Hexo 实现多地部署及优化访问速度这篇文章里应该用的是http链接，正常git一般都用ssh链接，所以是git@开头的地址。不确定自己用的什么模式可以用git remote -v确认一下， 如下图所示。<br><img src="https://i.loli.net/2020/10/13/7MKi1DPntg8Hjrm.png" alt="MINGW64__d_git_hexo 2020_10_12 23_39_08_副本.png"></li>
-<li>执行上传指令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master  </span><br><span class="line">//首次使用-u代表把本地origin分支上传至github的master的作为push的默认设置。之后就可以直接push。</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p>通过以上设置，部署一个库，源代码一个库，就可以对Hexo进行多地管理。在新的机器上，只需要安装npm和git然后从源代码库中进行Hexo的更新和部署操作。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/12/%E9%A6%96%E6%AC%A1%E6%B7%BB%E5%8A%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="王禕淼">
-      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/12/%E9%A6%96%E6%AC%A1%E6%B7%BB%E5%8A%A0/" class="post-title-link" itemprop="url">Hello Hexo!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-10-12 03:06:09 / 修改时间：03:20:34" itemprop="dateCreated datePublished" datetime="2020-10-12T03:06:09+08:00">2020-10-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/10/12/%E9%A6%96%E6%AC%A1%E6%B7%BB%E5%8A%A0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/12/%E9%A6%96%E6%AC%A1%E6%B7%BB%E5%8A%A0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Hexo首次添加文件"><a href="#Hexo首次添加文件" class="headerlink" title="Hexo首次添加文件"></a>Hexo首次添加文件</h1><blockquote>
-<p>一切归于基础。——沃兹基硕德</p>
-</blockquote>
-<figure class="highlight javascript"><figcaption><span>testCode</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//尝试代码亮</span></span><br><span class="line"><span class="keyword">var</span> msg = <span class="string">&quot;hello hexo!&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(msg);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="王禕淼">
-      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tyler Durden">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/10/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-10-10 00:44:38" itemprop="dateCreated datePublished" datetime="2020-10-10T00:44:38+08:00">2020-10-10</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/10/10/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/10/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1416,7 +1452,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1429,11 +1465,19 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wws563" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wws563" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:641553199@qq.com" title="E-Mail → mailto:641553199@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -1456,9 +1500,9 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fas fa-soap"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">王禕淼</span>
 </div>
