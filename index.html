@@ -162,6 +162,120 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2021/02/01/sum-1-2-3-%E4%B8%8E%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="王禕淼">
+      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FightClub">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/01/sum-1-2-3-%E4%B8%8E%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/" class="post-title-link" itemprop="url">sum(1,2)(3)与函数柯里化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-01 16:34:59" itemprop="dateCreated datePublished" datetime="2021-02-01T16:34:59+08:00">2021-02-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-02 01:11:44" itemprop="dateModified" datetime="2021-02-02T01:11:44+08:00">2021-02-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">js基础</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/02/01/sum-1-2-3-%E4%B8%8E%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/01/sum-1-2-3-%E4%B8%8E%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://upload-images.jianshu.io/upload_images/20278264-3fcdb1cacc31f938.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#39;库里&#39;化.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">题目 </span><br><span class="line">编写一个方法sum，使sum(1,2,3) 和 sum(1,2)(3)的输出都为6</span><br></pre></td></tr></table></figure>
+
+<p>感谢前人指路——<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2975c25e4d71">详解JS函数柯里化</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这道题目考的是<strong>函数柯里化</strong>的概念</p>
+<blockquote>
+<p>柯里化，英语：Currying(果然是满满的英译中的既视感)，是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。</p>
+</blockquote>
+<p>看概念，云里雾里，上例子！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通的add函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Currying后</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingAdd</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">y</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>)     <span class="comment">// 3</span></span><br><span class="line">curryingAdd(<span class="number">1</span>)(<span class="number">2</span>)   <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>看了例子，主要概念就是让函数返回一个function可以接受第二个（或者更多）括号里的参数并输出期望值。</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>针对这个题目，需要做的是：<br>1、利用闭包创建一个数组保存参数<br>2、返回一个方法，用于接收下一个括号里的参数<br>3、全部接收后，返回所有参数的和</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="限定参数数量"><a href="#限定参数数量" class="headerlink" title="限定参数数量"></a>限定参数数量</h3><p>如果仅仅针对题目，我们得到下面的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 固定数量参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">constSum</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 因为就三个参数，直接用计数器，定义数组添加参数，判断数组长度也可以</span></span><br><span class="line">    (<span class="built_in">this</span>.counter = <span class="number">0</span>), (<span class="built_in">this</span>.sumNum = <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">let</span> that = <span class="built_in">this</span>;</span><br><span class="line">    </span><br><span class="line"><span class="comment">// ...rest是ES6中参数解构的写法，函数中的rest为数组</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">innerSum</span>(<span class="params">...rest</span>) </span>&#123;</span><br><span class="line">        rest.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">            that.counter++;</span><br><span class="line">            that.sumNum += item;</span><br><span class="line">        &#125;);</span><br><span class="line">      <span class="comment">// 判断</span></span><br><span class="line">        <span class="keyword">if</span> (that.counter === <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> that.sumNum;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> innerSum;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = <span class="keyword">new</span> constSum();</span><br><span class="line"><span class="keyword">var</span> result = sum(<span class="number">1</span>, <span class="number">2</span>)(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">var</span> result2= sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result); <span class="comment">// 6  </span></span><br><span class="line"><span class="built_in">console</span>.log(resul2); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
+<p>这样可以实现题目中的效果，但是并不好，因为限定死3个参数，如果我们希望拥有更灵活通用的方法呢？<br>比如可以支持sum(1,2,3)(4)(5)……</p>
+<h3 id="不限定参数数量"><a href="#不限定参数数量" class="headerlink" title="不限定参数数量"></a>不限定参数数量</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不限数量参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">...rest</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 第一次执行时，定义一个数组专门用来存储所有的参数</span></span><br><span class="line">  <span class="keyword">var</span> _args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>); </span><br><span class="line"></span><br><span class="line">  <span class="comment">// 在内部声明一个函数，利用闭包的特性保存_args并收集所有的参数值</span></span><br><span class="line">   <span class="keyword">var</span> _adder = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">       _args.push(...arguments); </span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> _adder;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 利用toString隐式转换的特性，当最后执行时隐式转换，并计算最终的值返回</span></span><br><span class="line">  _adder.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sum = _args.reduce(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> a + b;</span><br><span class="line">  &#125;);</span><br><span class="line">      <span class="keyword">return</span> sum</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _adder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>))              <span class="comment">// 6</span></span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)(<span class="number">4</span>))             <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)(<span class="number">4</span>)(<span class="number">5</span>))        <span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
+<p>以上可以实现不限定参数数量的sum函数。<br>其中<code>Array.prototype.slice.call</code>和<code>toString隐式转换</code>其实都是js基础知识点，具体可以另开两篇文章。<br>但是这里先明白其功能——<br>一个是将参数转换为数组。<br>一个是在返回最后一次执行结束后，return了一个_adder方法，在输出时，正常会<code>隐式调用</code>Function.toString的方法，以字符方式输出方法。因为上面改写了_adder的toString方法，所以最后没有<code>以字符方式输出方法</code>，而是隐式调用了我们改写的<code>输出了所有参数的和</code>的toString方法。<br>这样的方法在chrome可以输出<code>f 6</code>这样的数字，但如果输出一下这个结果的类型比如——</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...上略</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> sum(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>))              <span class="comment">// function</span></span><br></pre></td></tr></table></figure>
+<p>我们会得到这个结果的类型其实还是function。所以这个方法其实是很勉强的实现了题目的效果，但得到的数据不能直接作为Number来使用。<br>还是需要<code>显示调用</code>才能得到number类型的结果——</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...上略</span></span><br><span class="line"><span class="keyword">let</span> sumToNumber = <span class="built_in">Number</span>.parseInt(sum(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>))</span><br><span class="line"><span class="built_in">console</span>.log(sumToNumber)              <span class="comment">// 6</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> sumToNumber)              <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="ES6改写"><a href="#ES6改写" class="headerlink" title="ES6改写"></a>ES6改写</h3><p>使用<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/function#rest-%E5%8F%82%E6%95%B0">ES6的不定参数rest</a>的新特性，该特性可以让<code>不定参数</code>变成一个<code>数组</code>传入，不需要访问<code>arguments</code>，也省去了使用<code>Array.prototype.slice.call(arguments); </code>生成数组，更加优雅。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumWithES6</span>(<span class="params">...rest</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _args = rest;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> _adder = <span class="function"><span class="keyword">function</span> (<span class="params">...innerRest</span>) </span>&#123;</span><br><span class="line">        _args.push(...innerRest); <span class="comment">// 这里使用的是ES6数组的解构</span></span><br><span class="line">        <span class="keyword">return</span> _adder;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    _adder.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> sum = _args.reduce(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a + b;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> _adder;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(sumWithES6(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2021/01/21/hot-potato/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1229,158 +1343,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wws563.github.io/2020/10/17/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E2%80%94%E2%80%94let%E5%92%8Cconst%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="王禕淼">
-      <meta itemprop="description" content="#1 - The first rule of Fight Club is, you do not talk about Fight Club.<br/> #2 - The second rule of Fight Club is, you DO NOT talk about Fight Club.<br/> #3 - If someone says stop, goes limp, taps out, the fight is over.<br/> #4 - Two guys to a fight.<br/> #5 - One fight at a time.<br/> #6 - No shirts, no shoes.<br/> #7 - Fights will go on as long as they have to.<br/> #8 - If this is your first night at Fight Club, you have to fight.<br/>">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FightClub">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/17/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E2%80%94%E2%80%94let%E5%92%8Cconst%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">ES6学习笔记1——let和const命令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-10-17 00:16:12" itemprop="dateCreated datePublished" datetime="2020-10-17T00:16:12+08:00">2020-10-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-28 00:32:12" itemprop="dateModified" datetime="2020-10-28T00:32:12+08:00">2020-10-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">js基础</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/10/17/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E2%80%94%E2%80%94let%E5%92%8Cconst%E5%91%BD%E4%BB%A4/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/17/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01%E2%80%94%E2%80%94let%E5%92%8Cconst%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>基于阮一峰老师的<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/let">ECMAScript 6 入门</a>进行学习。记录或重要或常用的部分，并尝试总结使用场景。</p>
-</blockquote>
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h2><p>在js中，由一对大括号<code>&#123;&#125;</code>括起来的部分，被称作一个块级作用域。比如下面：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;1000ms&#x27;</span>);</span><br><span class="line">	<span class="comment">//这就是一个块级作用域</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(i);</span><br><span class="line">	<span class="comment">//这也是一个块级作用域</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>块级作用域支持嵌套,如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//嵌套的作用域，内部可以读取外部的，外部的不能读取内部的</span></span><br><span class="line">&#123;&#123;</span><br><span class="line">	<span class="keyword">let</span> foo = <span class="number">1</span>;</span><br><span class="line">		<span class="built_in">console</span>.log(bar) <span class="comment">// undefined</span></span><br><span class="line">	&#123;<span class="keyword">let</span> bar = <span class="number">2</span></span><br><span class="line">   		<span class="built_in">console</span>.log(foo) <span class="comment">// 1;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h2><blockquote>
-<p>var命令会发生“变量提升”现象，即变量可以在声明之前使用，值为undefined。这种现象多多少少是有些奇怪的，按照一般的逻辑，变量应该在声明语句之后才可以使用。</p>
-</blockquote>
-<p>看解释非常抽象，我们结合下面的例子来讲。</p>
-<h2 id="为什么需要块级作用域"><a href="#为什么需要块级作用域" class="headerlink" title="为什么需要块级作用域"></a>为什么需要块级作用域</h2><blockquote>
-<p>ES5 只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。</p>
-</blockquote>
-<ol>
-<li><p>内层变量可能会覆盖外层变量。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(tmp);</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">false</span>) &#123; </span><br><span class="line">    <span class="keyword">var</span> tmp = <span class="string">&#x27;hello world&#x27;</span>; <span class="comment">//这行其实并没有被执行</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//上面的代码等效与下面的代码</span></span><br><span class="line"><span class="keyword">var</span> tmp = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> tmp; <span class="comment">//仅仅变量的声明被提升，赋值并没有被提升</span></span><br><span class="line">  <span class="built_in">console</span>.log(tmp);</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">false</span>) &#123; </span><br><span class="line">    tmp = <span class="string">&#x27;hello world&#x27;</span>; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>上面这个例子。执行<code>f</code>时，虽然定义了全局变量tmp,但是因为<a href="##%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87">变量提升</a>,<code>f</code>中定义的<code>tmp</code>，替代全局<code>tmp</code>。但是<code>tmp</code>的值却没有定义，导致<code>f</code>输出了<code>undefined</code>。</p>
-</li>
-<li><p>用来计数的循环变量泄露为全局变量。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; s.length; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(s[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(i); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
-<p>这个例子，变量i只用来控制循环，但是循环结束后，它并没有消失，泄露成了全局变量。</p>
-</li>
-</ol>
-<h2 id="什么是let"><a href="#什么是let" class="headerlink" title="什么是let"></a>什么是let</h2><p>了解了以上的基础，现在就可以说说let和const了。</p>
-<ol>
-<li><p><code>let</code>和<code>var</code>都是定义变量的用的命令。但是<code>let</code>声明的变量只在块级作用域内有效。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a <span class="comment">// ReferenceError: a is not defined.</span></span><br><span class="line">b <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不存在变量提升。ES6提出了<code>let</code>和<code>const</code>来防止变量提升可能导致的错误。它们所声明的变量一定要在声明后使用，否则报错。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var 的情况</span></span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// 输出undefined</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// let 的情况</span></span><br><span class="line"><span class="built_in">console</span>.log(bar); <span class="comment">// 报错ReferenceError</span></span><br><span class="line"><span class="keyword">let</span> bar = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>暂时性死区。</p>
-<blockquote>
-<p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  tmp = <span class="string">&#x27;abc&#x27;</span>; <span class="comment">// ReferenceError</span></span><br><span class="line">  <span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面这段代码，虽然外部已经声明了<code>tmp</code>,但是由于块内有<code>let</code>声明的<code>tmp</code>，在<code>let</code>完成声明之前，就是暂时性死区，既读不到<code>var</code>声明的<code>tmp</code>,也读不到<code>let</code>声明的<code>tmp</code>，所报错。</p>
-</li>
-</ol>
-<ol start="4">
-<li>不允许重复声明。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不报错</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  	<span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="什么是const"><a href="#什么是const" class="headerlink" title="什么是const"></a>什么是const</h2><ol>
-<li><p><code>const</code>声明一个只读的常量。一旦声明，常量的值就不能改变。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.1415</span>;</span><br><span class="line">PI <span class="comment">// 3.1415</span></span><br><span class="line"></span><br><span class="line">PI = <span class="number">3</span>;</span><br><span class="line"><span class="comment">// TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>因为<code>const</code>不能改变，所以声明时<strong>必须赋值</strong>。否则会报错。</p>
-</li>
-<li><p><code>块级作用域</code>，<code>暂时性死区</code>，<code>不会变量提升</code>，<code>不可重复声明</code>的特性和let一致。</p>
-</li>
-</ol>
-<h3 id="const的本质"><a href="#const的本质" class="headerlink" title="const的本质"></a>const的本质</h3><blockquote>
-<p>const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为 foo 添加一个属性，可以成功</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 foo 指向另一个对象，就会报错</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1><h2 id="解决for循环i变量泄露的问题"><a href="#解决for循环i变量泄露的问题" class="headerlink" title="解决for循环i变量泄露的问题"></a>解决for循环i变量泄露的问题</h2><p>在<a href="##%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F">为什么需要块级作用域</a>中，提到了for循环中使用var定义i会导致i泄露的问题。使用let就可以避免出现泄露，保证循环功能正确。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">forByVar</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;out of block:&#x27;</span> + i); </span><br><span class="line">&#125;</span><br><span class="line">forByVar(); <span class="comment">// 0,1,2,3,out of block:4</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">forByLet</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;out of block:&#x27;</span> + i); </span><br><span class="line">&#125;</span><br><span class="line">forByLet(); <span class="comment">//0,1,2,3, i is not defined error</span></span><br></pre></td></tr></table></figure>
-<p><code>let</code>的出现优雅的解决了<code>var</code>变量提升导致循环绑定事件只能绑到最后一个的问题。<br>其他解决方案见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhang-xun/p/6770670.html">for循环绑定事件解决方法</a></p>
-<h2 id="组件化框架与const"><a href="#组件化框架与const" class="headerlink" title="组件化框架与const"></a>组件化框架与const</h2><p><code>const</code>定义<code>Object对象</code>时，可以保证指针不变，防止被重新赋值，可以保证框架内部组件的稳定性。如react框架。<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/382468116">如何看待React官网中所有示例的变量声明全部使用const？</a></p>
-<div style="text-align:right">To Be Continued </div>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1452,7 +1414,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1465,7 +1427,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
